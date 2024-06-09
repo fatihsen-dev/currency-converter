@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   list-style: none;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-family: "Nunito", sans-serif;
+   outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+}
+
+:root {
+   --bg: #2b2e44;
+   --bg-secondary: #2e3247;
+   --base-text: #ffffff;
+   --base-text-primary: #6febdd;
+   --border: #3a4358;
+}
+
+body.light {
+   --bg: #f9f9f9;
+   --bg-secondary: #ffffff;
+   --base-text: #b1b0b0;
+   --base-text-primary: #6febdd;
+   --border: #eee;
+}
+
+.container {
+   max-width: 1200px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+#root {
+   height: 100vh;
+   background-color: var(--bg);
+   color: var(--base-text);
+   display: flex;
+   flex-direction: column;
+}
+
+#root > nav {
+   border-bottom: 1px solid var(--border);
+   height: 50px;
+}
+
+#root > nav > .container {
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   height: 100%;
+}
+
+#root > nav > .container .theme-ctnr {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 6px;
+}
+
+#root > nav > .container .theme-ctnr select {
+   background-color: transparent;
+   border: none;
+   color: var(--base-text);
+   font-size: 16px;
+}
+
+#root > nav > .container .theme-ctnr select option {
+   color: #111;
+}
+
+#root > nav > .container .theme-ctnr svg {
+   color: var(--base-text-primary);
+}
+
+main {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+main > div {
+   max-width: 800px;
+   width: 100%;
+}
+
+main > div > h2 {
+   color: var(--base-text-primary);
+   font-weight: 700;
+   font-size: 38px;
+   line-height: 44px;
+}
+
+main > div > p {
+   font-size: 18px;
+}
+
+main > div > div {
+   background-color: var(--bg-secondary);
+   margin-top: 30px;
+   padding: 30px 40px;
+   border-radius: 6px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main > div > div .convert-area {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+
+main > div > div .convert-area > div {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+main > div > div .convert-area > div .buttons {
+   display: flex;
+   border: 1px solid var(--border);
+   border-radius: 6px;
+   height: 40px;
+   overflow: hidden;
+}
+
+main > div > div .convert-area > div .buttons button {
+   flex: 1;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   color: var(--base-text);
+   transition: 0.15s;
+}
+
+main > div > div .convert-area > div .buttons button.active {
+   background-color: var(--base-text-primary);
+   color: #222;
+   font-weight: 700;
+}
+
+main > div > div .convert-area > div .buttons button:not(.active):hover {
+   background-color: var(--bg);
+   color: var(--base-text-primary);
+}
+
+main > div > div .convert-area > div .buttons button:not(:last-of-type) {
+   border-right: 1px solid var(--border);
+}
+
+main > div > div .convert-area > div .input-area {
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   border: 1px solid var(--border);
+   border-radius: 6px;
+   gap: 10px;
+   transition: 0.15s;
+}
+
+main > div > div .convert-area > button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   font-size: 20px;
+   aspect-ratio: 1;
+   background-color: var(--border);
+   border: none;
+   color: var(--base-text);
+   border-radius: 6px;
+   cursor: pointer;
+   transition: 0.15s;
+}
+
+main > div > div .convert-area > button:hover {
+   color: var(--base-text-primary);
+}
+
+main > div > div .convert-area > div .input-area:focus-within {
+   border: 1px solid var(--base-text-primary);
+}
+
+main > div > div .convert-area > div .input-area input {
+   background-color: transparent;
+   border: none;
+   font-size: 34px;
+   color: var(--base-text);
+   font-weight: 600;
+   width: 100%;
+   caret-color: var(--base-text-primary);
+}
+
+main > div > div .convert-area > div .input-area span {
+   font-size: 14px;
+   opacity: 0.6;
+   text-transform: uppercase;
+}
