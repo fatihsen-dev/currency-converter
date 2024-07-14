@@ -207,3 +207,28 @@ main > div > div .convert-area > div .input-area span {
    opacity: 0.6;
    text-transform: uppercase;
 }
+
+.loading {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.loading .spiner {
+   width: 40px;
+   aspect-ratio: 1;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   border-top-color: transparent;
+   animation: spiner 0.8s linear infinite;
+}
+
+@keyframes spiner {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}

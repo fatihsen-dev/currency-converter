@@ -79,7 +79,11 @@ export default function Currency() {
    }, [fromCode]);
 
    if (loading) {
-      return <>loading...</>;
+      return (
+         <div className='loading'>
+            <div className='spiner'></div>
+         </div>
+      );
    }
 
    return (
